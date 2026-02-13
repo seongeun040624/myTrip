@@ -1,0 +1,53 @@
+@import './variables';
+
+.signup{
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+    border: 3px solid $light-gray;
+    padding: 50px 40px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, .2);
+
+    h2{
+        text-align: center;
+        color: #333;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+    form{
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            display: block;
+            font-size: 14px;
+            background: none;
+
+            &:focus{outline: none;}
+        }
+
+        select{
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+            color: $black;
+            option{}
+        }
+        button{
+            display: block;
+            width: 100%;
+            border: 1px solid #ddd;
+            background: $primary;
+            color: #fff;
+            padding: 15px 0;
+            transition: .1s;
+
+            &:hover{
+                background: $primary-dark;
+            }
+        }
+    }
+    
+}

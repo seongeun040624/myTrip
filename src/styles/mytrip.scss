@@ -1,0 +1,107 @@
+.mytrip-container {
+  padding: 40px;
+  min-height: 92.3vh;
+
+  h1{
+    color: #fff;
+    margin-bottom: 30px;
+  }
+}
+
+.mytrip-container {
+  position: relative;
+  background: url("/img/mytrip.jpg") center/cover no-repeat;
+}
+
+/* 어두운 오버레이 */
+.mytrip-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); // 0.6이 어두운 정도
+  z-index: 1;
+}
+
+/* 실제 콘텐츠는 위로 올려주기 */
+.mytrip-container > * {
+  position: relative;
+  z-index: 2;
+  //color: white;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.trip-list {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  color: #fff;
+}
+
+.trip-item {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 10px;
+  //background: #fff;
+  width: 300px;
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  >div{
+    margin-top: 10px;
+    h3{}
+    p{font-size: 14px;}
+  }
+}
+
+.empty-trip {
+  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #777;
+    margin-bottom: 20px;
+  }
+
+  .login-btn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+}
+
+.empty{
+    p{
+        color: rgba(0, 0, 0, .6);
+        margin-bottom: 20px;
+    }
+    a{text-decoration: underline;}
+}

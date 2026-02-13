@@ -1,0 +1,67 @@
+@import './variables';
+@import './mixins';
+header{
+    width: 100%;
+    padding: 20px 30px;
+    background-color: $white;
+    border-bottom: 1px solid $light-gray;
+    /* position: fixed;
+    top: 0;
+    z-index: 10; */
+
+    @include flex-center-justcontent-spacebetween;
+    h1{
+       
+        a{
+             @include flex-center;
+            color:$gray;
+          
+
+            span{font-size: 14px; color:$primary;padding-left: 10px;}
+        }
+    }
+    nav{
+        ul{
+            @include flex-center;
+            gap:20px;
+            li{
+                a{
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .loginWrap{
+        position: absolute;
+        top: 5px; right: 30px;
+
+        a{
+            font-size: 12px;
+            margin-left: 10px;
+            color: $gray;
+
+            &:hover{text-decoration: underline;}
+        }
+
+        .in{
+            display: flex;
+            font-size: 12px;
+            align-items: center;
+            gap: 15px;
+            span{color: #000; font-weight: 500;}
+            .logoutBtn{
+                color: $gray;
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                &:hover{text-decoration: underline;}
+                
+            }
+        }
+
+        
+    }
+}
