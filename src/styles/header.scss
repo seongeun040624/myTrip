@@ -1,5 +1,5 @@
-@import './variables';
-@import './mixins';
+@use './variables' as *;
+@use './mixins' as *;
 header{
     width: 100%;
     padding: 20px 30px;
